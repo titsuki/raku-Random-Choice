@@ -30,7 +30,7 @@ Defined as:
     multi sub choice(:@p! --> Int) is export
     multi sub choice(Int :$size!, :@p! --> List)
 
-Returns a sampled value which is an Int value or a List. Where `:@p` is the probabilities associated with each index and `:$size` is the sample size.
+Returns a sample which is an Int value or a List. Where `:@p` is the probabilities associated with each index and `:$size` is the sample size.
 
 AUTHOR
 ======

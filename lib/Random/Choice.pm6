@@ -1,5 +1,5 @@
 use v6.c;
-unit module Random::Choice:ver<0.0.1>:auth<cpan:TITSUKI>;
+unit module Random::Choice:ver<0.0.2>:auth<cpan:TITSUKI>;
 
 my class AliasTable {
     has @.prob;
@@ -97,7 +97,7 @@ Defined as:
     multi sub choice(:@p! --> Int) is export
     multi sub choice(Int :$size!, :@p! --> List)
 
-Returns a sampled value which is an Int value or a List.
+Returns a sample which is an Int value or a List.
 Where C<:@p> is the probabilities associated with each index and C<:$size> is the sample size.
 
 =head1 AUTHOR
