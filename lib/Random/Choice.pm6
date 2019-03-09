@@ -104,7 +104,7 @@ Where C<:@p> is the probabilities associated with each index and C<:$size> is th
 
 =head2 Is C<Random::Choice> faster than Mix.roll?
 
-The answer is YES when you rolls a large biased dice but NO when a biased dice is small.
+The answer is YES when you roll a large biased dice but NO when a biased dice is small.
 
 Why? There are some possible reasons:
 
