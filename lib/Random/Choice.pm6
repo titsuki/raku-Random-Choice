@@ -1,5 +1,5 @@
 use v6.c;
-unit module Random::Choice:ver<0.0.2>:auth<cpan:TITSUKI>;
+unit module Random::Choice:ver<0.0.3>:auth<cpan:TITSUKI>;
 
 my class AliasTable {
     has @.prob;

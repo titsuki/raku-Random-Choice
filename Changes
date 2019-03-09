@@ -2,6 +2,9 @@ Revision history for Random-Choice
 
 {{$NEXT}}
 
+0.0.3  2019-03-09T14:53:05+09:00
+    - Add FAQ [b6ff77a]
+
 0.0.2  2019-03-04T01:15:07+09:00
     - Fix method explanation
 
