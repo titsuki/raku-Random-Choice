@@ -100,6 +100,55 @@ Defined as:
 Returns a sample which is an Int value or a List.
 Where C<:@p> is the probabilities associated with each index and C<:$size> is the sample size.
 
+=head1 FAQ
+
+=head2 Is C<Random::Choice> faster than Mix.roll?
+
+The answer is YES when you rolls a large biased dice but NO when a biased dice is small.
+
+Why? There are some possible reasons:
+
+=item C<Random::Choice> employs O(N) + O(1) algorithm whereas C<Mix.roll> employs O(N) + O(N) algorithm (rakudo 2018.12).
+=item C<Mix.roll> is directly written in nqp. In general, nqp-powered code is faster than naive-Perl6-powered code when they take small input.
+
+A benchmark result is here (For more info, see C<example/bench.p6>):
+
+=begin code :lang<bash>
+
+$ perl6 bench.p6 
+Benchmark: 
+Timing 1000 iterations of Mix, Random::Choice...
+       Mix: 0.121 wallclock secs (0.140 usr 0.003 sys 0.142 cpu) @ 8245.995/s (n=1000)
+Random::Choice: 0.264 wallclock secs (0.290 usr 0.005 sys 0.295 cpu) @ 3791.757/s (n=1000)
+O----------------O--------O------O----------------O
+|                | Rate   | Mix  | Random::Choice |
+O================O========O======O================O
+| Mix            | 8246/s | --   | -60%           |
+| Random::Choice | 3792/s | 153% | --             |
+O----------------O--------O------O----------------O
+Benchmark: 
+Timing 1000 iterations of Mix, Random::Choice...
+       Mix: 2.071 wallclock secs (2.069 usr 0.000 sys 2.069 cpu) @ 482.973/s (n=1000)
+Random::Choice: 1.438 wallclock secs (1.441 usr 0.000 sys 1.441 cpu) @ 695.211/s (n=1000)
+O----------------O-------O------O----------------O
+|                | Rate  | Mix  | Random::Choice |
+O================O=======O======O================O
+| Mix            | 483/s | --   | 45%            |
+| Random::Choice | 695/s | -31% | --             |
+O----------------O-------O------O----------------O
+Benchmark: 
+Timing 1000 iterations of Mix, Random::Choice...
+       Mix: 173.402 wallclock secs (173.244 usr 0.064 sys 173.308 cpu) @ 5.767/s (n=1000)
+Random::Choice: 14.767 wallclock secs (14.752 usr 0.008 sys 14.759 cpu) @ 67.721/s (n=1000)
+O----------------O--------O------O----------------O
+|                | Rate   | Mix  | Random::Choice |
+O================O========O======O================O
+| Mix            | 5.77/s | --   | 1076%          |
+| Random::Choice | 67.7/s | -91% | --             |
+O----------------O--------O------O----------------O
+
+=end code
+
 =head1 AUTHOR
 
 titsuki <titsuki@cpan.org>
