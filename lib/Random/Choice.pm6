@@ -115,37 +115,37 @@ A benchmark result is here (For more info, see C<example/bench.p6>):
 
 =begin code :lang<bash>
 
-$ perl6 bench.p6 
+$ perl6 example/bench.p6 
 Benchmark: 
-Timing 1000 iterations of Mix, Random::Choice...
-       Mix: 0.121 wallclock secs (0.140 usr 0.003 sys 0.142 cpu) @ 8245.995/s (n=1000)
-Random::Choice: 0.264 wallclock secs (0.290 usr 0.005 sys 0.295 cpu) @ 3791.757/s (n=1000)
-O----------------O--------O------O----------------O
-|                | Rate   | Mix  | Random::Choice |
-O================O========O======O================O
-| Mix            | 8246/s | --   | -60%           |
-| Random::Choice | 3792/s | 153% | --             |
-O----------------O--------O------O----------------O
+Timing 1000 iterations of Mix(size=10, @p.elems=10) , Random::Choice(size=10, @p.elems=10)...
+Mix(size=10, @p.elems=10) : 0.123 wallclock secs (0.133 usr 0.000 sys 0.133 cpu) @ 8106.224/s (n=1000)
+Random::Choice(size=10, @p.elems=10): 0.266 wallclock secs (0.310 usr 0.000 sys 0.310 cpu) @ 3760.148/s (n=1000)
+O--------------------------------------O--------O----------------------------O--------------------------------------O
+|                                      | Rate   | Mix(size=10, @p.elems=10)  | Random::Choice(size=10, @p.elems=10) |
+O======================================O========O============================O======================================O
+| Mix(size=10, @p.elems=10)            | 8106/s | --                         | -60%                                 |
+| Random::Choice(size=10, @p.elems=10) | 3760/s | 152%                       | --                                   |
+O--------------------------------------O--------O----------------------------O--------------------------------------O
 Benchmark: 
-Timing 1000 iterations of Mix, Random::Choice...
-       Mix: 2.071 wallclock secs (2.069 usr 0.000 sys 2.069 cpu) @ 482.973/s (n=1000)
-Random::Choice: 1.438 wallclock secs (1.441 usr 0.000 sys 1.441 cpu) @ 695.211/s (n=1000)
-O----------------O-------O------O----------------O
-|                | Rate  | Mix  | Random::Choice |
-O================O=======O======O================O
-| Mix            | 483/s | --   | 45%            |
-| Random::Choice | 695/s | -31% | --             |
-O----------------O-------O------O----------------O
+Timing 1000 iterations of Mix(size=100, @p.elems=100), Random::Choice(size=100, @p.elems=100)...
+Mix(size=100, @p.elems=100): 2.268 wallclock secs (2.263 usr 0.004 sys 2.266 cpu) @ 440.899/s (n=1000)
+Random::Choice(size=100, @p.elems=100): 1.489 wallclock secs (1.490 usr 0.007 sys 1.497 cpu) @ 671.669/s (n=1000)
+O----------------------------------------O-------O-----------------------------O----------------------------------------O
+|                                        | Rate  | Mix(size=100, @p.elems=100) | Random::Choice(size=100, @p.elems=100) |
+O========================================O=======O=============================O========================================O
+| Mix(size=100, @p.elems=100)            | 441/s | --                          | 53%                                    |
+| Random::Choice(size=100, @p.elems=100) | 672/s | -35%                        | --                                     |
+O----------------------------------------O-------O-----------------------------O----------------------------------------O
 Benchmark: 
-Timing 1000 iterations of Mix, Random::Choice...
-       Mix: 173.402 wallclock secs (173.244 usr 0.064 sys 173.308 cpu) @ 5.767/s (n=1000)
-Random::Choice: 14.767 wallclock secs (14.752 usr 0.008 sys 14.759 cpu) @ 67.721/s (n=1000)
-O----------------O--------O------O----------------O
-|                | Rate   | Mix  | Random::Choice |
-O================O========O======O================O
-| Mix            | 5.77/s | --   | 1076%          |
-| Random::Choice | 67.7/s | -91% | --             |
-O----------------O--------O------O----------------O
+Timing 1000 iterations of Mix(size=1000, @p.elems=1000), Random::Choice(size=1000, @p.elems=1000)...
+Mix(size=1000, @p.elems=1000): 191.405 wallclock secs (191.198 usr 0.084 sys 191.281 cpu) @ 5.225/s (n=1000)
+Random::Choice(size=1000, @p.elems=1000): 15.329 wallclock secs (15.306 usr 0.012 sys 15.318 cpu) @ 65.237/s (n=1000)
+O------------------------------------------O--------O-------------------------------O------------------------------------------O
+|                                          | Rate   | Mix(size=1000, @p.elems=1000) | Random::Choice(size=1000, @p.elems=1000) |
+O==========================================O========O===============================O==========================================O
+| Mix(size=1000, @p.elems=1000)            | 5.22/s | --                            | 1151%                                    |
+| Random::Choice(size=1000, @p.elems=1000) | 65.2/s | -92%                          | --                                       |
+O------------------------------------------O--------O-------------------------------O------------------------------------------O
 
 =end code
 
