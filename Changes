@@ -2,6 +2,9 @@ Revision history for Random-Choice
 
 {{$NEXT}}
 
+0.0.5  2019-03-09T15:44:58+09:00
+    - Fix FAQ and benchmark result [a770be] [bed91b]
+
 0.0.4  2019-03-09T14:55:17+09:00
     - Fix typo
 
