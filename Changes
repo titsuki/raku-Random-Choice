@@ -2,6 +2,9 @@ Revision history for Random-Choice
 
 {{$NEXT}}
 
+0.0.7  2019-12-24T01:03:35+09:00
+    - Replace p6/perl6 with raku
+
 0.0.6  2019-04-14T17:04:27+09:00
     - Delete a where constraint; it checked whether the sum of given @p is one [#2]
 

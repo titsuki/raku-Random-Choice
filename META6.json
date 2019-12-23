@@ -16,5 +16,5 @@
   "source-url" : "https://github.com/titsuki/raku-Random-Choice.git",
   "tags" : [ ],
   "test-depends" : [ ],
-  "version" : "0.0.6"
+  "version" : "0.0.7"
 }
