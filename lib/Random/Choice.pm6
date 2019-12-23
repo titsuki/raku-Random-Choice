@@ -74,7 +74,7 @@ multi sub choice(Int :$size!, :@p! --> List) {
 
 =head1 NAME
 
-Random::Choice - A Perl 6 alias method implementation
+Random::Choice - A Raku alias method implementation
 
 =head1 SYNOPSIS
 
@@ -89,7 +89,7 @@ say choice(:p([0.1, 0.1, 0.1, 0.7])); # 3
 
 =head1 DESCRIPTION
 
-Random::Choice is a Perl 6 alias method implementation. Alias method is an efficient algorithm for sampling from a discrete probability distribution.
+Random::Choice is a Raku alias method implementation. Alias method is an efficient algorithm for sampling from a discrete probability distribution.
 
 =head2 METHODS
 
@@ -112,7 +112,7 @@ The answer is YES when you roll a large biased dice or try to roll a dice many t
 Why? There are some possible reasons:
 
 =item C<Random::Choice> employs O(N) + O(1) algorithm whereas C<Mix.roll> employs O(N) + O(N) algorithm (rakudo 2018.12).
-=item C<Mix.roll> is directly written in nqp. In general, nqp-powered code is faster than naive-Perl6-powered code when they take small input.
+=item C<Mix.roll> is directly written in nqp. In general, nqp-powered code is faster than naive-Raku-powered code when they take small input.
 =item Both algorithms take O(N) initialization cost; however, the actual cost of C<Mix.roll> is slightly less than C<Random::Choice>.
 
 A benchmark result is here (For more info, see C<example/bench.p6>):

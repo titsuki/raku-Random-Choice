@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/titsuki/p6-Random-Choice.svg?branch=master)](https://travis-ci.org/titsuki/p6-Random-Choice)
+[![Build Status](https://travis-ci.org/titsuki/raku-Random-Choice.svg?branch=master)](https://travis-ci.org/titsuki/raku-Random-Choice)
 
 NAME
 ====
 
-Random::Choice - A Perl 6 alias method implementation
+Random::Choice - A Raku alias method implementation
 
 SYNOPSIS
 ========
@@ -18,7 +18,7 @@ say choice(:p([0.1, 0.1, 0.1, 0.7])); # 3
 DESCRIPTION
 ===========
 
-Random::Choice is a Perl 6 alias method implementation. Alias method is an efficient algorithm for sampling from a discrete probability distribution.
+Random::Choice is a Raku alias method implementation. Alias method is an efficient algorithm for sampling from a discrete probability distribution.
 
 METHODS
 -------
@@ -44,7 +44,7 @@ Why? There are some possible reasons:
 
   * `Random::Choice` employs O(N) + O(1) algorithm whereas `Mix.roll` employs O(N) + O(N) algorithm (rakudo 2018.12).
 
-  * `Mix.roll` is directly written in nqp. In general, nqp-powered code is faster than naive-Perl6-powered code when they take small input.
+  * `Mix.roll` is directly written in nqp. In general, nqp-powered code is faster than naive-Raku-powered code when they take small input.
 
   * Both algorithms take O(N) initialization cost; however, the actual cost of `Mix.roll` is slightly less than `Random::Choice`.
 
