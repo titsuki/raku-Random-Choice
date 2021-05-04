@@ -82,7 +82,7 @@ Random::Choice - A Raku alias method implementation
 
 use Random::Choice;
     
-say choice(:size(5), :p([0.1, 0.1, 0.1, 0.7])); # (3 3 3 0 1)
+say choice(:size(8), :p([0.1, 0.1, 0.1, 0.7])); # (3 1 0 3 3 3 3 3)
 say choice(:p([0.1, 0.1, 0.1, 0.7])); # 3
 
 =end code
