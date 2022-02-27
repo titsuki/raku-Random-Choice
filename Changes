@@ -2,6 +2,9 @@ Revision history for Random-Choice
 
 {{$NEXT}}
 
+0.0.8  2022-02-27T13:40:27+09:00
+    - Visualize benchmark result [#4]
+
 0.0.7  2019-12-24T01:03:35+09:00
     - Replace p6/perl6 with raku
 
