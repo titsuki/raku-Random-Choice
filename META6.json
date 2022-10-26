@@ -1,5 +1,5 @@
 {
-  "auth": "cpan:TITSUKI",
+  "auth": "zef:titsuki",
   "authors": [
     "titsuki"
   ],
@@ -21,5 +21,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.0.8"
+  "version": "0.0.9"
 }

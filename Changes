@@ -2,6 +2,9 @@ Revision history for Random-Choice
 
 {{$NEXT}}
 
+0.0.9  2022-10-26T23:51:34+09:00
+    - Upload module on zef instead of cpan
+
 0.0.8  2022-02-27T13:40:27+09:00
     - Visualize benchmark result [#4]
 
